@@ -22,7 +22,9 @@
     "reactstrap": "^8.0.0"
   },
   "devDependencies": {
-    "prettier": "^1.18.2"
+    "husky": "^2.4.1",
+    "prettier": "1.18.2",
+    "pretty-quick": "^1.11.1"
   },
   "keywords": [
     "gatsby"
@@ -34,7 +36,7 @@
     "format": "prettier --write src/**/*.{js,jsx}",
     "start": "npm run develop",
     "serve": "gatsby serve",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"", 
+    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
     "heroku-postbuild": "gatsby build"
   },
   "repository": {
@@ -43,5 +45,10 @@
   },
   "bugs": {
     "url": "https://github.com/gatsbyjs/gatsby/issues"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "pretty-quick --staged"
+    }
   }
 }
